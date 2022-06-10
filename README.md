@@ -9,7 +9,7 @@ As an Admin, I want the user to login.
 
 ### Tasks:
 - Create database model to store user information
-- Create user login page
+- Create user login page 
 
 
 As a user, I want to be able to view ranked movies by 'all time' as well as 'genre' and 'release year'.
