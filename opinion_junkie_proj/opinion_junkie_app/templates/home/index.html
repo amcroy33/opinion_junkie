@@ -1,0 +1,80 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+{% load static %}
+    <section class="container-fluid">
+
+        
+        <div class="row">
+
+            <div class="
+                    col-12
+                    col-lg-2 
+                    d-none
+                    d-lg-block
+                    p-5
+                    vh-100
+                    card-ctm
+                    ">
+                    <button class="btn btn-dark button-ctm m-3 border border-4" type="button">About</button>
+                    <button class="btn btn-dark button-ctm m-3 border border-4" type="button">Movies</button>
+                    <button class="btn btn-dark button-ctm m-3 border border-4" type="button">Books</button>
+                    <button class="btn btn-dark button-ctm m-3 border border-4" type="button">TV Shows</button>
+                    <button class="btn btn-dark button-ctm m-3 border border-4" type="button">Games</button>
+                </div>
+
+                <div class="col-12 col-lg-10 p-5">
+
+                    <div class="row">
+
+                        <div class="
+                                col-12 
+                                d-flex 
+                                flex-column align-items-center
+                                flex-lg-row justify-content-lg-center
+                            "
+                        >
+                        
+                        <button class="btn btn-dark button-ctm m-3" type="button">All Time</button>
+                        <button class="btn btn-dark button-ctm m-3" type="button">By Genre</button>
+                        <button class="btn btn-dark button-ctm m-3" type="button">By Release Year</button>
+
+                        </div>
+
+                        <div class="col-12">
+                            
+                            <div class="row">
+                                
+                                
+                                {% for movie in movies %}
+                                <div class="col-12 col-lg-4">
+                                    <div class="p-2 mb-2 d-flex justify-content-center">
+                                        <img src='https://picsum.photos/200/300'>
+                                        <button class="btn btn-dark button-ctm m-3">{{ forloop.counter }}. {{ movie.title }}</button>
+                                    </div>
+                                </div>
+                                {% endfor %} 
+
+
+                            </div>
+
+                        </div>
+                        
+
+
+
+
+                        
+                </div>
+
+                </div>
+            
+
+                
+
+            </div>
+
+        </section>
+{% endblock content %}

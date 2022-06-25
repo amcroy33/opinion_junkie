@@ -1,0 +1,110 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+{% load static %}
+
+
+<section class="container-fluid">
+    <div class="row">
+
+        <div class="
+                col-12
+                col-lg-2 
+                d-none
+                d-lg-block
+                p-5
+                vh-100
+                card-ctm
+                ">
+                <button class="btn btn-dark button-ctm m-3 border border-4" type="button">Home</button>
+                <button class="btn btn-dark button-ctm m-3 border border-4" type="button">Ratings</button>
+                <button class="btn btn-dark button-ctm m-3 border border-4" type="button">Reviews</button>
+            </div>
+
+            <div class="col-12 col-lg-10 p-5">
+
+                <div class="row">
+
+                    <div class="
+                            col-12 
+                            d-flex 
+                            flex-column align-items-center
+                            flex-lg-row justify-content-lg-center
+                            d-block
+                            d-md-none
+                        "
+                    >
+                    
+                        <button class="btn btn-dark button-ctm mb-5 p-3" type="button">Home</button>
+
+                    </div>
+                    
+                    <div class="col-12">
+                        
+                        <div class="row border border-4 mb-4 card-ctm rounded">
+
+                            <div class="col-lg-6">
+                                <div class="p-4 d-flex justify-content-center">
+                                    <h1 class="display-5"> {{ movie.title }}</h1>
+                                
+                                </div>
+                            </div>
+
+                        </div>
+                        
+                        <div class="row">
+                            
+                            <div class="col-12 col-lg-5">
+                                <div class="p-2 mb-2 d-flex justify-content-center">
+                                    <img src="https://picsum.photos/300/400" class="rounded">
+                                </div>
+                                <div class="row mb-4">
+                                    <div class="card-ctm-1 d-flex justify-content-center">
+                                        Rating
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="card-ctm col-12 col-lg-6 rounded">
+                                <div class="p-4 d-flex">
+                                    Release Date: </br> </br> </br>
+                                    Genre: Drama </br> </br> </br>
+                                    Main Characters: </br> </br> </br> 
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                        <div class="row">
+
+                            <div class="card-ctm col-12 col-lg-12 mt-5 rounded">
+                                <div class="p-4 d-flex">
+                                    Reviews: </br> </br> </br>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    
+
+
+
+
+                    
+            </div>
+
+        </div>
+    
+
+        
+
+    </div>
+
+</section>
+     
+{% endblock content %}
