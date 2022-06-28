@@ -70,8 +70,8 @@
 
                             <div class="card-ctm col-12 col-lg-6 rounded">
                                 <div class="p-4 d-flex">
-                                    Release Date: </br> </br> </br>
-                                    Genre: Drama </br> </br> </br>
+                                    Release Date: {{movie.release_date}}</br> </br> </br>
+                                    Genre: {{movie.genre}} </br> </br> </br>
                                     Main Characters: </br> </br> </br> 
                                 </div>
                             </div>
@@ -83,7 +83,11 @@
 
                             <div class="card-ctm col-12 col-lg-12 mt-5 rounded">
                                 <div class="p-4 d-flex">
-                                    Reviews: </br> </br> </br>
+                                    {% for review in movie.reviews.all %}
+                                        {{review}}
+                                    {% endfor %}
+
+                                    Reviews:
                                 </div>
                             </div>
 

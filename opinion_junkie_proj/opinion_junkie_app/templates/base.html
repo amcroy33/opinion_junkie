@@ -17,6 +17,19 @@
 </head>
 <body>
     <h1 class="display-5 ctm-h p-5">Opinion Junkie</h1>
+
+        {% if messages %}
+            
+            {% for message  in messages %}
+
+                {{message}}
+                
+            {% endfor %}
+
+
+        {% endif %}
+
+
         {% block content %}
 
         

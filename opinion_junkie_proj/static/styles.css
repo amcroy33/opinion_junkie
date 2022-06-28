@@ -45,3 +45,7 @@ body {
 .card-ctm-1 {
     color: #cbb26a;
 }
+
+label {
+    padding: 10px;
+}

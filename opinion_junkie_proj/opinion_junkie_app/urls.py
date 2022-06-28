@@ -7,7 +7,7 @@ urlpatterns = [
     # path('myview/', views.myview, name='myview')
     path('', views.home, name='myview'),
     path('home/', views.home, name='home'),
-    path('detail/<str:title>', views.detail, name='detail')
-    # path('movie_detail', views.movie_detail, name='movie_detail')
+    path('detail/<str:title>', views.detail, name='detail'),
+    path('reviews/<str:title>', views.reviews, name='reviews')
 
 ]

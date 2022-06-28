@@ -1,7 +1,7 @@
 from email import contentmanager
-import re
 from django.shortcuts import get_object_or_404, render
-from .models import Movie
+from requests import post
+from .models import Movie, Review
 
 def home(request):
     movies = Movie.objects.all()
@@ -18,3 +18,13 @@ def detail(request, title):
     }
 
     return render(request, 'movie/detail.html', context)
+
+def reviews(request, title):
+
+    movie = (Movie, title)
+
+    context = {
+        'post': post
+    }
+
+    return render(request, 'reviews/reviews.html', context)

@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="row">
+
+    <h2 class="col-12
+                d-flex
+                justify-content-center
+                mt-5">
+                Register</h2>
+
+    <div class="col-12
+                d-flex 
+                justify-content-center 
+                mt-4
+                ">
+
+                <form action="{% url 'users_app:register' %}" method="POST">
+
+                    <label for="username">Username</label>
+                    <input type="text" name="username" id="username">
+
+                    <br/>
+                    
+                    <label for="password">Password</label>
+                    <input type="password" name="password" id="password">
+
+                    <br/>
+
+                    <input type="submit" id="submit" value="Submit">
+
+                    {% csrf_token %}
+
+                </form>
+
+    </div>
+
+    <div class="row p-5">
+
+        <p class="col-12 d-flex justify-content-center">
+            Already have an account?</p>
+        <a href="{% url 'users_app:login' %}" class="col-12 d-flex justify-content-center">Login Here</a>
+
+    </div>
+
+</div>
+    
+
+
+{% endblock content %}
