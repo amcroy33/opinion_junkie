@@ -7,16 +7,18 @@
     <h2 class="col-12
                 d-flex
                 justify-content-center
-                mt-5">
+                mt-5
+                ctm-fnt">
                 Register</h2>
 
     <div class="col-12
                 d-flex 
                 justify-content-center 
                 mt-4
+                ctm-fnt
                 ">
 
-                <form action="{% url 'users_app:register' %}" method="POST">
+                <form action="{% url 'users_app:register' %}" method="POST" class="ctm-fnt">
 
                     <label for="username">Username</label>
                     <input type="text" name="username" id="username">

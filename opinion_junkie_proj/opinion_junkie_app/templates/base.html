@@ -13,11 +13,23 @@
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js
+    "></script>
+
     <title>Opinion Junkie</title>
 </head>
 <body>
+
     <h1 class="display-5 ctm-h p-5">Opinion Junkie</h1>
 
+<!-- if user is logged in, display logout -->
+<!-- move login/logout icon into header -->
+
+
+    <a class="d-flex justify-content-end" href="{% url 'users_app:login' %}" title="Login">Login<i style="color: #cbb26a;" class="bi bi-door-open"></i></a>
+
+
+    
         {% if messages %}
             
             {% for message  in messages %}
@@ -36,5 +48,7 @@
 
         {% endblock content %}
     
+
+
 </body>
 </html>

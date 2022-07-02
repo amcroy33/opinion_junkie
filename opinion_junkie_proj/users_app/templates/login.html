@@ -7,16 +7,18 @@
     <h2 class="col-12
                 d-flex
                 justify-content-center
-                mt-5">
+                mt-5
+                ctm-fnt">
                 Login</h2>
 
     <div class="col-12
                 d-flex 
                 justify-content-center 
                 mt-4
+                ctm-fnt
                 ">
 
-                <form action="{% url 'users_app:login' %}" method="POST">
+                <form action="{% url 'users_app:login' %}" method="POST" class="ctm-fnt">
 
                     <label for="username">Username</label>
                     <input type="text" name="username" id="username">
@@ -27,7 +29,7 @@
                     <input type="password" name="password" id="password">
 
                     <br/>
-
+                    <!-- center Enter button ------------------------------------------------------ -->
                     <input type="submit" id="submit" value="Enter">
 
                     {% csrf_token %}

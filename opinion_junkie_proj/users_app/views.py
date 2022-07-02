@@ -1,14 +1,22 @@
-import re
-from django.shortcuts import render, redirect
+from operator import index
+from django.shortcuts import get_object_or_404, render, redirect
 from django.http import HttpResponse
+from django.http import JsonResponse
+from .models import Movie
+
+
+
 from .models import User
 from django.contrib.auth import (
     authenticate, 
+    get_user_model,
     login as django_login,
     logout as django_logout
     )
 
 from django.contrib import messages
+
+from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 def register(request):
@@ -55,4 +63,11 @@ def login(request):
 
         messages.success(request, f"Welcome {user.username}!")
 
-        return render(request, 'login.html')
+        return redirect('opinion_junkie_app:home')
+
+
+@login_required
+def profile(request, username):
+    user = get_object_or_404(get_user_model(),username=username)
+
+    return render(request, 'profile.html')

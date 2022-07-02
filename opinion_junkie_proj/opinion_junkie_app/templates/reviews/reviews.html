@@ -6,7 +6,17 @@
 {% load static %}
 
 
-Test
-<!-- Reviews: {{reviews.movie}} -->
+<form action="{% url 'opinion_junkie_app:detail' movie.id %}" method="POST" class="d-flex justify-conent-end">
+                                
+    <label for="review">Type here</label>
+    <input type="text" name="review" id="review">
+    
+    <br/>
+    
+    <input type="submit" id="submit" value="Enter">
+    
+    {% csrf_token %}
+    
+</form>
 
 {% endblock content %}

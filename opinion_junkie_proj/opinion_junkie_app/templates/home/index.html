@@ -4,6 +4,9 @@
 {% block content %}
 
 {% load static %}
+
+
+
     <section class="container-fluid">
 
         
@@ -51,8 +54,10 @@
                                 {% for movie in movies %}
                                 <div class="col-12 col-lg-4">
                                     <div class="p-2 mb-2 d-flex justify-content-center">
-                                        <img src='https://picsum.photos/200/300'>
-                                        <button class="btn btn-dark button-ctm m-3">{{ forloop.counter }}. {{ movie.title }}</button>
+                                        <!-- <img src='https://picsum.photos/200/300'> -->
+                                        <img src="{{ movie.poster_url }}" alt="{{movie.title}}">
+                                        
+                                        <a href="{% url 'opinion_junkie_app:detail' movie.id %}"<button type="submit" class="btn btn-dark button-ctm m-3 d-flex align-items-center">{{ forloop.counter }}. {{ movie.title }}</button></a>
                                     </div>
                                 </div>
                                 {% endfor %} 

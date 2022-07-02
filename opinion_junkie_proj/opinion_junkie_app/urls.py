@@ -4,10 +4,9 @@ from . import views
 
 app_name = 'opinion_junkie_app'
 urlpatterns = [
-    # path('myview/', views.myview, name='myview')
     path('', views.home, name='myview'),
     path('home/', views.home, name='home'),
-    path('detail/<str:title>', views.detail, name='detail'),
-    path('reviews/<str:title>', views.reviews, name='reviews')
-
+    path('detail/<int:movie_id>', views.detail, name='detail'),
+    path('reviews/<int:movie_id>', views.reviews, name='reviews'),
+    path('favorite/<int:movie_id>', views.favorite, name='favorite')
 ]
